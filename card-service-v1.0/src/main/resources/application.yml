@@ -1,0 +1,9 @@
+
+server:
+    port: 8082
+spring:
+    application:
+        name: card-service-v1.0
+    profiles:
+        active:
+            - local

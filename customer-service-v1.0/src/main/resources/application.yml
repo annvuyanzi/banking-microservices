@@ -1,0 +1,9 @@
+
+server:
+    port: 8081
+spring:
+    application:
+        name: customer-service-v1.0
+    profiles:
+        active:
+            - local
