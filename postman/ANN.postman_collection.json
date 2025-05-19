@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "8c30755e-1a7c-404a-a58e-a2cdb585434f",
+		"name": "ANN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29844204",
+		"_collection_link": "https://crimson-eclipse-156599.postman.co/workspace/MK_DEV~e411c4aa-a0d3-4ba5-ad07-bb7c0a41cdf3/collection/29844204-8c30755e-1a7c-404a-a58e-a2cdb585434f?action=share&source=collection_link&creator=29844204"
+	},
+	"item": [
+		{
+			"name": "create-account",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"iban\": \"1000003\",\r\n    \"bicSwift\": \"TEST 1225\",\r\n    \"customerId\": \"10003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-acc-byId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/accounts/a276950e-ac68-428d-8fa2-0dd94925038c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"accounts",
+						"a276950e-ac68-428d-8fa2-0dd94925038c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-accounts-all",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/accounts?page=0&size=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-acc-byId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"iban\": \"1000001\",\r\n    \"bicSwift\": \"TEST OK\",\r\n    \"customerId\": \"10001\",\r\n     \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/accounts/6a6dac0e-82a8-4822-ba2e-0667ba9d6cf4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"accounts",
+						"6a6dac0e-82a8-4822-ba2e-0667ba9d6cf4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-acc-byId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/accounts/6c1556c5-0098-484e-9dbb-0f9ed939f120",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"accounts",
+						"6c1556c5-0098-484e-9dbb-0f9ed939f120"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-customer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Ann 1223\",\r\n  \"lastName\": \"Wnsns\",\r\n  \"otherName\": \"Kirui\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-customer-by-id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/ea2a2da2-5cc9-42c1-ba3c-3174e614aa5d?page=0&size=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"ea2a2da2-5cc9-42c1-ba3c-3174e614aa5d"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-customers-all",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-customer-by-id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Ann 1223\",\r\n  \"lastName\": \"Wnsns\",\r\n  \"otherName\": \"Kirui\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/9a7c00dc-e4c1-4c75-8468-3361573bd2e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"9a7c00dc-e4c1-4c75-8468-3361573bd2e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-customer-by-id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/e74e9792-1f5a-4107-ba03-be9e582c16bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"e74e9792-1f5a-4107-ba03-be9e582c16bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-card",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cardAlias\": \"Multicurrency Prepaid Card\",\r\n  \"accountId\": \"3e4b16b0-3dfb-4afc-bbee-bab3482c6706\",\r\n  \"typeOfCard\": \"VIRTUAL\",\r\n  \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-card-by-id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cardAlias\": \"Multicurrency Prepaid Card\",\r\n  \"accountId\": \"70ad7cae-52c1-47c7-b72b-329cd0ad711a\",\r\n  \"typeOfCard\": \"Virtual\",\r\n  \"pan\": \"5249000022220002\",\r\n  \"cvv\": \"333\",\r\n  \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/cards/47abc2be-aecf-48de-a1c5-eeb9688339dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cards",
+						"47abc2be-aecf-48de-a1c5-eeb9688339dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-card-by-id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/cards/47abc2be-aecf-48de-a1c5-eeb9688339dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cards",
+						"47abc2be-aecf-48de-a1c5-eeb9688339dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-cards-all",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-card-by-id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "isEncrypted",
+						"value": "false",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/cards/47abc2be-aecf-48de-a1c5-eeb9688339dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cards",
+						"47abc2be-aecf-48de-a1c5-eeb9688339dc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
